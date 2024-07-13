@@ -41,7 +41,7 @@ print(f'{lista}{len(lista)}')'''
 # pois achei muito interessante a forma como ele usa da 'clonagem' das listas nas linhas 18 e 20 (aqui, 61 e 63)
 # para alterar as filas, como ele explica nas linhas 15 e 16 (58 e 59).
 
-último = 0
+'''último = 0
 fila1 = []
 fila2 = []
 while True:
@@ -79,4 +79,6 @@ while True:
             )
         x = x + 1
     if sair:
-        break
+        break'''
+
+print('Hello, World!')
