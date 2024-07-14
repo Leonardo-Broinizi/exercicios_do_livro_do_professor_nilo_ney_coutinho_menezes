@@ -81,4 +81,59 @@ while True:
     if sair:
         break'''
 
-print('Hello, World!')
+# Pilha de pratos (miha tentativa sem olhar a do professor):
+
+pilha = []
+sair = 'N'
+último = 0
+while True:
+    x = 0
+    prato = input('Digite A para adicionar um prato e B para lavar e remover, ou S para sair: ').upper().strip()
+    while True and len(prato) > x:
+        if prato[x] == 'A':
+            pilha.append(último)
+            último += 1
+            x += 1
+            print(f'{último}° prato adicionado.')
+        elif prato[x] == 'B':
+            if len(pilha) >= 1:
+                último = pilha.pop(último-1)#Aqui eu poderia ter simplesmente colocado -1 que já resolveria o problema, já que, ao análisar listas, -1 é o equivalente ao último número. Só me dei conta quando vi a resolução do professor.
+                x += 1
+                print(f'{último + 1}° prato lavado.')
+            else:
+                print('Todos os pratos foram lavados.')
+                x += 1
+        elif prato[x] == 'S':
+            print(f'Restaram {len(pilha)} pratos na pilha.')
+            sair = 'S'
+            break
+        else:
+            print('Comando inválido!')
+            x += 1
+    if sair == 'S':
+        break
+    print(f'Restam {len(pilha)} pratos na pilha.')
+
+# Exercício feito pelo professor:
+
+prato = 5
+pilha = list(range(1, prato + 1))
+while True:
+    print(f"\nExistem {len(pilha)} pratos na pilha")
+    print(f"Pilha atual: {pilha}")
+    print("Digite E para empilhar um novo prato,")
+    print("ou D para desempilhar. S para sair.")
+    operação = input("Operação (E, D ou S):")
+    if operação == "D":
+        if len(pilha) > 0:
+            lavado = pilha.pop(-1)
+            print(f"Prato {lavado} lavado")
+        else:
+            print("Pilha vazia! Nada para lavar.")
+    elif operação == "E":
+        prato += 1  # Novo prato
+        pilha.append(prato)
+    elif operação == "S":
+        break
+    else:
+        print("Operação inválida! Digite apenas E, D ou S!")
