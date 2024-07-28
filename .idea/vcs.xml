@@ -2,7 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/nilo_ney_coutinho_livro_python/exercicios_do_livro_do_professor_nilo_ney_coutinho" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/nilo_ney_coutinho_livro_python/exercicios_do_livro_do_professor_nilo_ney_coutinho." vcs="Git" />
   </component>
 </project>

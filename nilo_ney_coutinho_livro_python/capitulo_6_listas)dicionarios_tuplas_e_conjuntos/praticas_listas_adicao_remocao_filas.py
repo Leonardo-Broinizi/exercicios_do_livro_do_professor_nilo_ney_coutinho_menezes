@@ -82,7 +82,7 @@ while True:
         break'''
 
 # Pilha de pratos (miha tentativa sem olhar a do professor):
-
+'''
 pilha = []
 sair = 'N'
 último = 0
@@ -137,3 +137,100 @@ while True:
         break
     else:
         print("Operação inválida! Digite apenas E, D ou S!")
+
+l = [1, 3, 5, 8, 12, 15]
+p = int(input('Digite o número a ser pesquisado: '))
+n = 0
+for e in l:
+    if e == p:
+        print(f'O número {p} foi encontrado na posição {n}.')
+        break
+    n += 1
+else:
+    print(f'O número {p} não foi encontrado.')'''
+
+# ENUMERATE: praticar mais o uso dessa função!
+'''L = [5,9,13]
+for x, e in enumerate(L):
+    print(f'[{x}]{e}')'''
+
+'''lista = [32, 43, 22, 9, 87]
+menor = maior = 0
+for i in range(len(lista)):
+    if i == 0:
+        menor = maior = lista[i]
+    elif lista[i] < menor:
+        menor = lista[i]
+    if lista[i] > maior:
+        maior = lista[i]
+print(menor,maior)'''
+
+'''for e in lista:
+    print(e)'''
+
+'''
+# Minha tentativa de fazer o programa 6.12 deste capítulo sem olhar a resolução do professor:
+
+lista = [9,8,7,12,0,13,21]
+ímpares = []
+pares = []
+for c in range(len(lista)):
+    if lista[c]%2 == 0 and lista[c] != 0:
+        pares.append(lista[c])
+    elif lista[c]%2 == 1 and lista[c] != 0:
+        ímpares.append(lista[c])
+print(f'Pares {pares} e ímpares {ímpares}.')
+
+# Código do professor Nilo:     
+
+V = [9, 8, 7, 12, 0, 13, 21]
+P = []
+I = []
+for e in V:
+    if e % 2 == 0:
+        P.append(e)
+    else:
+        I.append(e)
+print('Pares: ', P)
+print('Ímpares: ', I)'''
+
+# Minha tentativa de fazer o programa 6.13 (controle da utilização de salas de um cinema) deste capítulo sem olhar a resolução do professor:
+
+'''vagas_por_sala = [9, 8, 7, 12, 0, 13, 21] # Só quando terminei e ví o código do professor percebí que copie  a lista errada, mas isso não interfere na lógica do meu código.
+while True:
+    assentos = 0
+    sala = int(input('Digite o número da sala [1, 2, 3, 4, 5] ou 0 para sair: '))
+    if sala == 0:
+        break
+    else:
+        assentos = int(input('Digite a quantidade de assentos que deseja reservar: '))
+    if vagas_por_sala[sala-1] < assentos:
+        print(f'Número de vagas superior à quantidade disponível! Temos {vagas_por_sala[sala-1]} assentos disponíveis nessa sala.')
+    else:
+        vagas_por_sala[sala-1] -= assentos
+        print(vagas_por_sala)'''
+
+# Código do professor Nilo (eu costumo deixar meu código mais completo que o do professor, mas dessa vez foi o contrário rs):
+
+lugares_vagos = [10, 2, 1, 3, 0]
+while True:
+    sala = int(input('Sala (0 sai): '))
+    if sala == 0:
+        print('Fim')
+        break
+    if sala > len(lugares_vagos) or sala < 1:
+        print('Sala inválida')
+    elif lugares_vagos[sala-1] == 0:
+        print('Desculpe, sala lotada!')
+    else:
+        lugares = int(input(f'Quantos lugares você deseja ({lugares_vagos[sala - 1]} vagos): '))
+        if lugares > lugares_vagos[sala-1]:
+            print('Esse número de lugares não está disponível.')
+        elif lugares < 0:
+            print('Número inválido')
+        else:
+            lugares_vagos[sala-1] -= lugares
+            print(f'{lugares} lugares vendidos')
+    print('Utilização das salas')
+    for x, l in enumerate(lugares_vagos):
+        print(f'Sala {x + 1} - {l} lugar(es) vazio(s)')
