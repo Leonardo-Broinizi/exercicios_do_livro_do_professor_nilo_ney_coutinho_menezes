@@ -212,7 +212,7 @@ while True:
 
 # Código do professor Nilo (eu costumo deixar meu código mais completo que o do professor, mas dessa vez foi o contrário rs):
 
-lugares_vagos = [10, 2, 1, 3, 0]
+'''lugares_vagos = [10, 2, 1, 3, 0]
 while True:
     sala = int(input('Sala (0 sai): '))
     if sala == 0:
@@ -233,4 +233,121 @@ while True:
             print(f'{lugares} lugares vendidos')
     print('Utilização das salas')
     for x, l in enumerate(lugares_vagos):
-        print(f'Sala {x + 1} - {l} lugar(es) vazio(s)')
+        print(f'Sala {x + 1} - {l} lugar(es) vazio(s)')'''
+
+#   Minha tentativa de fazer o programa 6.14 sem ver o código, só o enunciado.
+
+'''compras = []
+ítem = ''
+cont = 0
+while True:
+    ítem = str(input('Digite o ítem desejado: ')).strip().upper()
+    if ítem == 'FIM':
+        break
+    compras.append(ítem)
+    cont += 1
+print(f'Você comprou {cont} ítens, que são: {compras}')
+
+#   Código do livro do programa 6.14:b
+compras = []
+while True:
+    produto = input("Produto:")
+    if produto ==  "fim":
+        break
+    compras.append(produto)
+    for p in compras:
+        print(p)
+
+l = ['maças','uvas','kiwis']
+for itens in l:
+    print(itens,end=': ')
+    for letras in itens:
+        print(letras,end=' - ')
+    print()
+#   Programa 6.18, impressão das compras: 
+
+produto1 = ['maça',10,0.30]
+produto2 = ['pera',5,0.75]
+produto3 = ['kiwi',4,0.98]
+compras = [produto1,produto2,produto3]
+for l in compras:
+    print(f'Produto: {l[0]}')
+    print(f'Quantidade: {l[1]}')
+    print(f'Preço R${l[2]:.2f}\n')'''
+
+#   Minha tentativa de criar o programa 6.19 sem ver o código do livro, apenas com o enunciado:
+
+'''ListaGeral = []
+while True:
+    Lista = []
+    continuar = ' '
+    produto = str(input('Digite o nome do produto: ')).strip()
+    Lista.append(produto)
+    quantidade = int(input('Digite a quantidade: '))
+    Lista.append(quantidade)
+    preço = float(input('Digite o preço: '))
+    Lista.append(preço)
+    ListaGeral.append(Lista)
+    while continuar not in 'SN':
+        continuar = str(input('Quer cadastrar mais itens? [S/N]: ')).strip().upper()[0]
+    print()
+    if continuar == 'N':
+        break
+for i in ListaGeral:
+    print(f'Produto: {i[0]}\nQuantidade: {i[1]}\nPreço R${i[2]:.2f}\n')
+#   Análise após terminar meu código e ver o do professor Nilo no livro: eu não fiz exatamente o que ele estava pedindo, 
+# mas cheguei perto. Agora, o código do professor é claramente mais enxuto, mesmo desconsiderando meus preciosismos. 
+# Ainda preciso me empenhar em entender as possibilidades de manipulação dos elementos (nesse caso, listas)
+# para encontrar soluções mais simples para meus desafios. A saga continua!
+
+#   Programa 6.19 do livro:
+
+compras = []
+while True:
+    produto = input("Produto: ")
+    if produto == "fim":
+        break
+    quantidade = int(input('Quantidade: '))
+    preço = float(input('Preço: '))
+    compras.append([produto,quantidade,preço])
+soma = 0.0
+for e in compras:
+    print(f"{e[0]:20s} x {e[1]:5d} {e[2]:5.2f} {e[1] * e[2]:6.2f}")
+    soma += e[1] * e[2]
+print(f"Total: {soma:7.2f}")'''
+
+#   Minha tentativa antes de ver o código do livro de fazer um ordenador de números em listas:
+'''lista = [3,1,81,93,32,23,1,2,39]
+for contador1 in range(len(lista)):
+    for contador2, números in enumerate(lista):
+        if números > lista[contador1]:
+            controle = lista[contador1]
+            lista[contador1] = números
+            lista[contador2] = controle
+print(lista)
+#  Comentario após ver o programa 6.20 com o método de bolhas: Apesar de meu  código resolver o problemas, 
+# ele faz isso com mais "força bruta"(com mais laços) que o do método de bolhas, que já é pesado (exige muito processamento).'''
+
+#   (código do livro) Programa 6.20, ORDENAÇÃO PELO MÉTODO DE BOLHAS:
+
+
+'''L = [7, 4, 3, 12, 8]
+fim = 5
+while fim > 1:
+    trocou = False
+    x = 0
+    while x < (fim - 1):
+        if L[x] > L[x + 1]:
+            trocou = True
+            temp = L[x]
+            L[x] = L[x + 1]
+            L[x + 1] = temp
+        x += 1
+    if not trocou:
+        break
+    fim -= 1
+for e in L:
+    print(e)'''
+
+
+
