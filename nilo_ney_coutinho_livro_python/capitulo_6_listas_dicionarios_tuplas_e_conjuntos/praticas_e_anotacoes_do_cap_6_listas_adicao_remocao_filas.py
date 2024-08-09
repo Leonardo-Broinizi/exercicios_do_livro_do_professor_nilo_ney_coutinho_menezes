@@ -364,7 +364,10 @@ while True:
     else:
         print('O produto digitado não foi encontrado.\nVerifique se digitou corretamente e tente novamente.')'''
 
-estoque = {'CAMISA':[101,159.99],
+#   Fiz o seguinte código para tentar criar um programa de estoque e vendas como o mencionado na descrição do programa 6.22,
+# mas sem ver o código dele. Gostei bastante do resultado.
+
+'''estoque = {'CAMISA':[101,159.99],
            'BERMUDA':[74,199.00],
            'CALÇA':[203,319.99],
            'BLUSA':[89,399.99],
@@ -389,4 +392,29 @@ while True:
                 total += estoque[escolha][1] * quantidade
                 print('Compra efetuada com sucesso!')
                 break
-print(f'O valor total de suas compras foi: {total:.2f}.')
+print(f'O valor total de suas compras foi: {total:.2f}.')'''
+
+# Programa 6.22 - Exemplo de dicionário com estoque e operações de venda:
+
+estoque = {'tomate':[1000,2.30],
+           'alface':[500,0.45],
+           'batata':[2001,1.20],
+           'feijão':[100,1.50]}
+venda = [['tomate',5], ['batata',10], ['alface',5]]
+total = 0
+print('Vendas:\n')
+for operação in venda:
+    produto, quantidade = operação
+    preço = estoque[produto][1]
+    custo = preço * quantidade
+    print(f'{produto:12s}:{quantidade:3d} x {preço:6.2f} = {custo:6.2f}')
+    estoque[produto][0] -= quantidade
+    total += custo
+print(f'Custo total: {total:21.2f}\n')
+print('Estoque:\n')
+for chave, dados in estoque.items():
+    print('Descrição: ', chave)
+    print('Quantidade: ', dados[0])
+    print(f'Preço: { dados[1]:6.2f}\n')
+
+print()
