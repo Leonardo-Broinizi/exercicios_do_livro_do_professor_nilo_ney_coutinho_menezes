@@ -1,10 +1,8 @@
-frase = str(input('Digite uma frase: '))
+frase = str(input('Digite uma frase: ')).strip()
 dicionário = {}
-for letras in frase:
-    if letras in dicionário:
-        dicionário[letras] = dicionário[letras] + 1
+for letra in frase:
+    if letra in dicionário:
+        dicionário[letra] = dicionário[letra] + 1
     else:
-        dicionário[letras] = 1
+        dicionário[letra] = 1
 print(dicionário)
-
-
