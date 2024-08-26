@@ -396,7 +396,7 @@ print(f'O valor total de suas compras foi: {total:.2f}.')'''
 
 # Programa 6.22 - Exemplo de dicionário com estoque e operações de venda:
 
-estoque = {'tomate':[1000,2.30],
+'''estoque = {'tomate':[1000,2.30],
            'alface':[500,0.45],
            'batata':[2001,1.20],
            'feijão':[100,1.50]}
@@ -417,4 +417,30 @@ for chave, dados in estoque.items():
     print('Quantidade: ', dados[0])
     print(f'Preço: { dados[1]:6.2f}\n')
 
-print()
+print()'''
+
+
+#   Programa 6.23 - Exemplo de dicionário sem valor padrão:
+
+'''d = {}
+for letra in 'abracadabra':
+    if letra in d:
+        d[letra] = d[letra] + 1
+    else:
+        d[letra] = 1
+print(d)'''
+
+#   Programa 6.23 - Simplificação do programa 6.23 usando o método get:
+
+'''d = {}
+for letra in 'abracadabra':
+    d[letra] = d.get(letra, 0) + 1 # O método 'get' tenta obter a chave procurada. Caso não a encontre, retorna o segundo parâmetro, no caso 0. Se o segundo parâmetro não for especificado, get retornará None. 
+print(d)'''
+
+
+
+'''d = {'A':5, 'B': 8, 'C':12}
+d['D'] = d.get('A',55)
+print(d)'''
+
+
