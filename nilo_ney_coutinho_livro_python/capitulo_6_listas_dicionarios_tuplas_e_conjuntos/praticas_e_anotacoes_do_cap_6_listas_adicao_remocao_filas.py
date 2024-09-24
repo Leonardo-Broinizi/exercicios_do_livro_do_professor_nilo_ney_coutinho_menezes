@@ -443,4 +443,18 @@ print(d)'''
 d['D'] = d.get('A',55)
 print(d)'''
 
+'''a = [1, 2, 3, 4, 5, 6]
+b = tuple
+b = tuple(a)
+a[0] = 9
+
+print(f'A: {a}, type(a): {type(a)}, B: {b}, type(b): {type(b)}')'''
+
+'''lista_a = [1, 3, 5, 7, 9, 11, 12, 13, 14]
+lista_b = [2, 4, 6, 8, 10, 11, 12, 13, 14]
+print(f'lista_a: {lista_a}\nlista_b: {lista_b}')
+print(f'Os valores que aparecem em ambas as listas são: {set(lista_a)|set(lista_b)}')
+print(f'Os valores que não se repetem nas listas são: {set(lista_a) ^ set(lista_b)}')
+print(f'Os valores que aparecem só na lista a são: {set(lista_a) - set(lista_b)}')
+print(f'Os valores que aparecem só na lista a são: {set(lista_b) - set(lista_a)}')'''
 
